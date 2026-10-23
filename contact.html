@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl's Bike Shop - Contact</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+            color: #222;
+        }
+
+        header {
+            background: #123f3b;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .banner {
+            background: #218f7c;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 35px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 12px;
+            background: #218f7c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #126a5b;
+        }
+
+        footer {
+            background: #123f3b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Karl's Bike Shop</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you!</p>
+</section>
+
+<main class="container">
+
+    <h2>Send Us a Message</h2>
+
+    <form id="contactForm">
+
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label for="subject">Subject</label>
+        <input
+            type="text"
+            id="subject"
+            placeholder="Enter your subject"
+            required
+        >
+
+        <label for="message">Message</label>
+        <textarea
+            id="message"
+            placeholder="Write your message here"
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+        <p id="status" role="status"></p>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Karl's Bike Shop</p>
+</footer>
+
+<script>
+    document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("status").textContent =
+                "Thank you for contacting us! This demo form does not send messages yet.";
+
+            this.reset();
+        });
+</script>
+
+</body>
+</html>

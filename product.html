@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl's Bike Shop - Products</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+            color: #222;
+        }
+
+        header {
+            background: #123f3b;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .banner {
+            background: #218f7c;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .container {
+            padding: 30px 6%;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(210px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px #00000010;
+        }
+
+        .bike-icon {
+            font-size: 55px;
+        }
+
+        .price {
+            color: #16866f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        button {
+            background: #218f7c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 11px 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #126a5b;
+        }
+
+        footer {
+            background: #123f3b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Karl's Bike Shop</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Our Bike Products</h1>
+    <p>Choose your bike and get ready to ride!</p>
+</section>
+
+<main class="container">
+
+    <h2>Available Products</h2>
+
+    <p id="cartCount">Cart: 0 item(s)</p>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="bike-icon">🚵</div>
+            <h3>Mountain Bike</h3>
+            <p>For trails and outdoor adventures.</p>
+            <p class="price">₱12,500</p>
+            <button onclick="addToCart('Mountain Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚴</div>
+            <h3>Road Bike</h3>
+            <p>For paved roads and long rides.</p>
+            <p class="price">₱18,000</p>
+            <button onclick="addToCart('Road Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚲</div>
+            <h3>City Bike</h3>
+            <p>For everyday commuting.</p>
+            <p class="price">₱7,500</p>
+            <button onclick="addToCart('City Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚲</div>
+            <h3>Hybrid Bike</h3>
+            <p>For streets and light trails.</p>
+            <p class="price">₱10,500</p>
+            <button onclick="addToCart('Hybrid Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚲</div>
+            <h3>BMX Bike</h3>
+            <p>For tricks and BMX riding.</p>
+            <p class="price">₱6,800</p>
+            <button onclick="addToCart('BMX Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚲</div>
+            <h3>Folding Bike</h3>
+            <p>Easy to store and transport.</p>
+            <p class="price">₱8,900</p>
+            <button onclick="addToCart('Folding Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚲</div>
+            <h3>Kids' Bike</h3>
+            <p>For young cycling beginners.</p>
+            <p class="price">₱4,500</p>
+            <button onclick="addToCart('Kids Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🚵</div>
+            <h3>Gravel Bike</h3>
+            <p>For mixed roads and adventures.</p>
+            <p class="price">₱16,500</p>
+            <button onclick="addToCart('Gravel Bike')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">⛑️</div>
+            <h3>Cycling Helmet</h3>
+            <p>Essential protective gear.</p>
+            <p class="price">₱950</p>
+            <button onclick="addToCart('Cycling Helmet')">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <div class="bike-icon">🔒</div>
+            <h3>Bike Lock</h3>
+            <p>Helps secure your bicycle.</p>
+            <p class="price">₱450</p>
+            <button onclick="addToCart('Bike Lock')">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Karl's Bike Shop</p>
+</footer>
+
+<script>
+    let cart = 0;
+
+    function addToCart(product) {
+        cart++;
+
+        document.getElementById("cartCount").textContent =
+            "Cart: " + cart + " item(s)";
+
+        alert(product + " added to your demo cart!");
+    }
+</script>
+
+</body>
+</html>

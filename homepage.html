@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl's Bike Shop - Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+        }
+
+        header {
+            background: #123f3b;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 80px 8%;
+            color: white;
+            background:
+                linear-gradient(
+                    rgba(10,50,43,.75),
+                    rgba(16,116,128,.75)
+                ),
+                url("PIC2(2).jpg") center/cover;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero p {
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #25a88b;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        main {
+            padding: 35px 8%;
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 4px 12px #00000010;
+        }
+
+        footer {
+            background: #123f3b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Karl's Bike Shop</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Find Your Next Ride!</h1>
+
+    <p>
+        Welcome to Karl's Bike Shop! Discover quality bicycles
+        and cycling accessories for your daily rides, outdoor
+        adventures, and weekend journeys.
+    </p>
+
+    <a href="products.html" class="btn">
+        Shop Now
+    </a>
+</section>
+
+<main>
+    <h2>Why Choose Karl's Bike Shop?</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>Quality Bikes</h3>
+            <p>
+                Find bikes for city streets, mountain trails,
+                and everyday travel.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Affordable Prices</h3>
+            <p>
+                Explore different bicycles and accessories
+                at sample prices.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Customer Service</h3>
+            <p>
+                Contact us if you have questions about
+                our products.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Karl's Bike Shop. Ride Safe!</p>
+</footer>
+
+</body>
+</html>

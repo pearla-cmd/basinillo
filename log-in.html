@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karl's Bike Shop - Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            background:
+                linear-gradient(
+                    rgba(10, 70, 70, 0.55),
+                    rgba(20, 100, 150, 0.65)
+                ),
+                url("PIC2(1).jpg") center/cover no-repeat;
+        }
+
+        .login-box {
+            width: 350px;
+            max-width: 100%;
+            padding: 35px 30px;
+            text-align: center;
+            color: white;
+
+            background: linear-gradient(
+                150deg,
+                rgba(40, 183, 143, 0.90),
+                rgba(31, 111, 169, 0.92)
+            );
+
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .brand {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 13px 15px;
+            margin: 10px 0;
+            border: 1px solid white;
+            border-radius: 25px;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+
+        .input-box::placeholder {
+            color: white;
+        }
+
+        .remember {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid white;
+            border-radius: 25px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .login-btn:hover {
+            background: white;
+            color: #168a88;
+        }
+
+        a {
+            color: white;
+        }
+
+        .forgot {
+            display: block;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        .signup {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        #message {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <p class="brand">Karl's Bike Shop</p>
+
+        <h1>Login</h1>
+
+        <form id="loginForm">
+
+            <input
+                class="input-box"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                class="input-box"
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                minlength="6"
+                required
+            >
+
+            <label class="remember">
+                <input type="checkbox" name="remember">
+                Remember Me
+            </label>
+
+            <button class="login-btn" type="submit">
+                Login
+            </button>
+
+            <a href="#" class="forgot" id="forgotLink">
+                Forgot Password?
+            </a>
+
+        </form>
+
+        <p class="signup">
+            New to our shop?
+            <a href="#" id="signupLink">Sign Up</a>
+        </p>
+
+        <p id="message" role="status"></p>
+
+    </div>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            message.textContent =
+                "Demo login only. Account verification is not connected.";
+        });
+
+        document.getElementById("forgotLink")
+            .addEventListener("click", function(event) {
+                event.preventDefault();
+                message.textContent =
+                    "Password recovery is not connected yet.";
+            });
+
+        document.getElementById("signupLink")
+            .addEventListener("click", function(event) {
+                event.preventDefault();
+                message.textContent =
+                    "Sign-up is not connected yet.";
+            });
+    </script>
+
+</body>
+</html>
